@@ -27,11 +27,14 @@ body {
     display: flex;
     height: 60px;
     margin: 4px 2px 0 4px;
-    width: 342px;
+    width: 335px;
     border-radius:0.5cap;
     background-color: rgb(72, 192, 102);
-    justify-content: stretch;
+    justify-content: end;
+    align-items: end;
     padding-top: 0;
+    padding-right: 6px;
+    font-size: 50px;
 }
 
 .btn {
@@ -42,3 +45,4 @@ body {
 button {
     padding: 13px;
 }
+
