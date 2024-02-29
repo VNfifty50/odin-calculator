@@ -13,8 +13,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-between;
+    align-content: space-between;
     border-style: solid;
     border-width: 1px;
     border-radius: 1cap;
@@ -23,9 +23,15 @@ body {
     background-color: rgb(91, 94, 94);
 }
 
-#display  {
-    margin: 15px;
-    padding-top: 30px;
+.display  {
+    display: flex;
+    height: 60px;
+    margin: 4px 2px 0 4px;
+    width: 342px;
+    border-radius:0.5cap;
+    background-color: rgb(72, 192, 102);
+    justify-content: stretch;
+    padding-top: 0;
 }
 
 .btn {
