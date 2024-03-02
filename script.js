@@ -1,13 +1,4 @@
 
-// FIXES NEEDED:
-//
-//      - display gotta handle number of digits greater than 12
-//      - display gotta handle more than one operator sign
-//      -   "       "   handle negative numbers 
-//      -   "       "   handle decimal values
-//      -   "       "   handle values after percentage been applied
-     
-
 
 let display = document.querySelector(".display");
 display.textContent = "0"; 
