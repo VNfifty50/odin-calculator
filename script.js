@@ -1,4 +1,14 @@
 
+// FIXES NEEDED:
+//
+//      - display gotta handle number of digits greater than 12
+//      - display gotta handle more than one operator sign
+//      -   "       "   handle negative numbers 
+//      -   "       "   handle decimal values
+//      -   "       "   handle values after percentage been applied
+     
+
+
 let display = document.querySelector(".display");
 display.textContent = "0"; 
 
@@ -12,6 +22,9 @@ let minus = document.querySelector("#minus");
 let mult = document.querySelector("#mult");
 let equal = document.querySelector("#equal");
 let div = document.querySelector("#div");
+let plusminus = document.querySelector("#plusminus");
+let comma = document.querySelector("#comma");
+let mod = document.querySelector("#mod");
 
 // reference to each digit button
 
@@ -29,136 +42,187 @@ let nine = document.querySelector("#nine");
 // handle each digit click event
 
 let counter = 0;
-
+let commaOn = false;
 
 zero.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "0";
+    if (commaOn) {
+        display.textContent += "0";
+        operation += "0";
     } else {
-        currentContent = "0";
-    }
+        let currentContent = display.textContent;
+        
+        if (counter > 0) {
+            currentContent += "0";
+        } else {
+            currentContent = "0";
+        }
 
-    display.textContent = currentContent;
-    operation += "0";
-    counter++;
+        display.textContent = currentContent;
+        operation += "0";
+        counter++;
+    }
 });
 
 one.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "1";
+    if (commaOn) {
+        display.textContent += "1";
+        operation += "1";
     } else {
-        currentContent = "1";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "1";
+        } else {
+            currentContent = "1";
+        }
 
-    display.textContent = currentContent;
-    operation += "1";
-    counter++;
+        display.textContent = currentContent;
+        operation += "1";
+        counter++;
+    }
 });
 
 two.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "2";
+    if (commaOn) {
+        display.textContent += "2";
+        operation += "2";
     } else {
-        currentContent = "2";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "2";
+        } else {
+            currentContent = "2";
+        }
 
-    display.textContent = currentContent;
-    operation += "2";
-    counter++;
+        display.textContent = currentContent;
+        operation += "2";
+        counter++;
+    }
 });
 
 three.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "3";
+    if (commaOn) {
+        display.textContent += "3";
+        operation += "3";
     } else {
-        currentContent = "3";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "3";
+        } else {
+            currentContent = "3";
+        }
 
-    display.textContent = currentContent;
-    operation += "3";
-    counter++;
+        display.textContent = currentContent;
+        operation += "3";
+        counter++;
+    }
 });
 
 four.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "4";
+    if (commaOn) {
+        display.textContent += "4";
+        operation += "4";
     } else {
-        currentContent = "4";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "4";
+        } else {
+            currentContent = "4";
+        }
 
-    display.textContent = currentContent;
-    operation += "4";
-    counter++;
+        display.textContent = currentContent;
+        operation += "4";
+        counter++;
+    }
 });
 
 five.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "5";
+    if (commaOn) {
+        display.textContent += "5";
+        operation += "5";
     } else {
-        currentContent = "5";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "5";
+        } else {
+            currentContent = "5";
+        }
 
-    display.textContent = currentContent;
-    operation += "5";
-    counter++;
+        display.textContent = currentContent;
+        operation += "5";
+        counter++;
+    }
 });
 
 six.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "6";
+    if (commaOn) {
+        display.textContent += "6";
+        operation += "6";
     } else {
-        currentContent = "6";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "6";
+        } else {
+            currentContent = "6";
+        }
 
-    display.textContent = currentContent;
-    operation += "6";
-    counter++;
+        display.textContent = currentContent;
+        operation += "6";
+        counter++;
+    }
 });
 
 seven.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "7";
+    if (commaOn) {
+        display.textContent += "7";
+        operation += "7";
     } else {
-        currentContent = "7";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "7";
+        } else {
+            currentContent = "7";
+        }
 
-    display.textContent = currentContent;
-    operation += "7";
-    counter++;
+        display.textContent = currentContent;
+        operation += "7";
+        counter++;
+    }
 });
 
 eight.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "8";
+    if (commaOn) {
+        display.textContent += "8";
+        operation += "8";
     } else {
-        currentContent = "8";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "8";
+        } else {
+            currentContent = "8";
+        }
 
-    display.textContent = currentContent;
-    operation += "8";
-    counter++;
+        display.textContent = currentContent;
+        operation += "8";
+        counter++;
+    }
 });
 
 nine.addEventListener("click", () => {
-    let currentContent = display.textContent;
-    if (counter > 0) {
-        currentContent += "9";
+    if (commaOn) {
+        display.textContent += "9";
+        operation += "9";
     } else {
-        currentContent = "9";
-    }
+        let currentContent = display.textContent;
+        if (counter > 0) {
+            currentContent += "9";
+        } else {
+            currentContent = "9";
+        }
 
-    display.textContent = currentContent;
-    operation += "9";
-    counter++;
+        display.textContent = currentContent;
+        operation += "9";
+        counter++;
+        }
 });
 
 // handle each operation click event
@@ -167,33 +231,68 @@ clear.addEventListener("click", () => {
     display.textContent = "0";
     operation = "";
     counter = 0;
+
+    commaOn = false;
 });
 
 plus.addEventListener("click", () => {
     operation += "+";
     counter = 0;
+
+    commaOn = false;
 });
 
 minus.addEventListener("click", () => {
     operation += "-";
     counter = 0;
+
+    commaOn = false;
 });
 
 mult.addEventListener("click", () => {
     operation += "*";
     counter = 0;
+
+    commaOn = false;
 });
 
 div.addEventListener("click", () => {
     operation += "/";
     counter = 0;
+
+    commaOn = false;
 });
 
 equal.addEventListener("click", () => {
-    console.log(operation);
     let arr = cleanData(operation);
     let result = operate(arr[0], arr[1], arr[2]);
     display.textContent = result;
+
+    commaOn = false;
+    operation = display.textContent;
+});
+
+plusminus.addEventListener("click", () => {
+    let helper = parseInt(display.textContent);
+
+    helper *= -1;
+
+    display.textContent = helper;
+
+    commaOn = false;
+});
+
+comma.addEventListener("click", () => {
+    if (commaOn === false) {
+        display.textContent += ".";
+    }
+
+    commaOn = true;
+});
+
+mod.addEventListener("click", () => {
+    let number = parseFloat(display.textContent) / 100;
+    display.textContent = number;
 });
 
 // clear operation data
