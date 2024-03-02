@@ -232,17 +232,18 @@ function cleanData(string) {
 // check the value of the operator and call its own function
 function operate(valueA, valueB, operator) {
     let result = 0;
-    console.log(valueA, valueB, operator);
-    switch(operator) {
-        case "+":
-            result = add(valueA, valueB);
-        case "-":
-            result = subctration(valueA, valueB);
-        case "*":
-            result = multiply(valueA, valueB);
-        case "/":
-            result = divide(valueA, valueB);
+
+    if (operator === "+") {
+        result = add(valueA, valueB);
+    } else if (operator === "-") {
+        result = subctration(valueA, valueB);
+    } else if (operator === "*") {
+        result = multiply(valueA, valueB);
+    } else if (operator === "/") {
+        result = divide(valueA, valueB);
     }
+    
+
     return result;
 }
 
