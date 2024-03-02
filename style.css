@@ -26,8 +26,11 @@ body {
 .display  {
     display: flex;
     height: 60px;
-    margin: 4px 2px 0 4px;
-    width: 335px;
+    margin: 8px 4px 0 8px;
+    width: 327px;
+    border-style: solid;
+    border-width:0.02cap;
+    border-color: black;
     border-radius:0.5cap;
     background-color: rgb(72, 192, 102);
     justify-content: end;
@@ -35,6 +38,7 @@ body {
     padding-top: 0;
     padding-right: 6px;
     font-size: 50px;
+    font-weight: 400;
 }
 
 .btn {
@@ -43,6 +47,21 @@ body {
 }
 
 button {
-    padding: 13px;
+    padding: 8px;
+    width: 70px;
+    border-radius: 1cap;
+    font-size: 24px;
+}
+
+#zero {
+    width: 160px;
+}
+
+.btn.last {
+    margin-bottom: 6px;
+}
+
+.btn.first {
+    margin-top: 2px;
 }
 
